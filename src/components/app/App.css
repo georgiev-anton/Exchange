@@ -148,3 +148,12 @@ th {
 .colorGray{
   color: gray;
 }
+
+.plusInElipse {
+  fill: white;
+}
+
+.rightBodyDeposit {
+  color: white;
+  background: #e6433b;
+}
