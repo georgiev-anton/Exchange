@@ -7,3 +7,5 @@ const Stakan = () => {
     </div>
   );
 };
+
+export default Stakan;

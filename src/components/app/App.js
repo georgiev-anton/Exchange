@@ -41,9 +41,11 @@ class App extends Component {
         <BrowserRouter>
           <Header></Header>
           <Switch>
-            <Route path="/:leftBody/:rightBody">
-              <LeftBody />
-              <RightBody />
+            <Route path="/">
+              <div className="leftBodyRightBodyDiv">
+                <LeftBody />
+                <RightBody />
+              </div>
             </Route>
             <Route path="*">
               <Redirect to="/chart/buy" />

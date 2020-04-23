@@ -1,34 +1,35 @@
 import React from "react";
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  useRouteMatch,
-  Redirect,
-  Link,
-  useParams
-} from "react-router-dom";
-import Chart from "../chart/Chart";
-import Exchange from "../exchange/Exchange";
+import { connect } from "react-redux";
+import { updateTabsRightBody } from "../../redux/tabs/actions";
 
-const RightBody = () => {
-  const { leftBody } = useParams();
+const RightBody = ({ tabs, updateTabsRightBody }) => {
   return (
-    <BrowserRouter>
-      <div>
-        <Link to={`/${leftBody}/buy`}>Купить</Link>
-        <Link to={`/${leftBody}/sell`}>Продать</Link>
+    <div>
+      <div className="rightBodyNav">
+        <p
+          onClick={() => updateTabsRightBody("BUY")}
+          className={tabs === "BUY" ? "rightBodyTabSelected" : "rightBodyTab"}
+        >
+          Купить BTC
+        </p>
+        <p
+          onClick={() => updateTabsRightBody("SELL")}
+          className={tabs === "SELL" ? "rightBodyTabSelected" : "rightBodyTab"}
+        >
+          Продать BTC
+        </p>
       </div>
-      <Switch>
-        <Route path={`*/buy`}>
-          <h1>BUY</h1>
-        </Route>
-        <Route path={`*/sell`}>
-          <h1>SELL</h1>
-        </Route>
-      </Switch>
-    </BrowserRouter>
+      <div>{tabs === "BUY" ? <p>BUY</p> : <p>SELL</p>}</div>
+    </div>
   );
 };
+const mapStateToProps = state => {
+  return {
+    tabs: state.tabsReducer.right
+  };
+};
 
-export default RightBody;
+const mapDispatchToProps = {
+  updateTabsRightBody
+};
+export default connect(mapStateToProps, mapDispatchToProps)(RightBody);

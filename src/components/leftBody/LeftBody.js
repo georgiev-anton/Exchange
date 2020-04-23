@@ -1,36 +1,48 @@
 import React from "react";
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  useRouteMatch,
-  Redirect,
-  Link,
-  matchPath,
-  useParams
-} from "react-router-dom";
 import Chart from "../chart/Chart";
-import Exchange from "../exchange/Exchange";
+import Stakan from "../stakan/Stakan";
+import { connect } from "react-redux";
+import { updateTabsLeftBody } from "../../redux/tabs/actions";
 
-const LeftBody = () => {
-  const { rightBody } = useParams();
+const LeftBody = ({ tabs, updateTabsLeftBody }) => {
+  console.log(tabs);
 
   return (
-    <BrowserRouter>
-      <div>
-        <Link to={`/chart/${rightBody}`}>График в реальном времени</Link>
-        <Link to={`/stakan/${rightBody}`}>Стакан</Link>
+    <div>
+      <div className="leftBodyNav">
+        <div className="leftBodyNavLeft">
+          <p
+            onClick={() => updateTabsLeftBody("CHART")}
+            className={tabs === "CHART" ? "leftBodyTabSelected" : "leftBodyTab"}
+          >
+            График в реальном времени
+          </p>
+          <p
+            onClick={() => updateTabsLeftBody("STAKAN")}
+            className={
+              tabs === "STAKAN" ? "leftBodyTabSelected" : "leftBodyTab"
+            }
+          >
+            Стакан
+          </p>
+        </div>
+        <div className="leftBodyNavRight">
+          <p>Профессиональная версия</p>
+          <p>Полноэкранный режим</p>
+        </div>
       </div>
-      <Switch>
-        <Route path={`/chart/*`}>
-          <Chart />
-        </Route>
-        <Route path={`/stakan/*`}>
-          <h1>Stakan</h1>
-        </Route>
-      </Switch>
-    </BrowserRouter>
+      <div>{tabs === "CHART" ? <Chart /> : <Stakan />}</div>
+    </div>
   );
 };
 
-export default LeftBody;
+const mapStateToProps = state => {
+  return {
+    tabs: state.tabsReducer.left
+  };
+};
+
+const mapDispatchToProps = {
+  updateTabsLeftBody
+};
+export default connect(mapStateToProps, mapDispatchToProps)(LeftBody);

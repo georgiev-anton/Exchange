@@ -33,7 +33,8 @@ th {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   font-family: "GothamPro-Medium";
 }
 .header div {
@@ -85,4 +86,65 @@ th {
 
 .order div {
   display: flex;
+}
+
+.leftBodyRightBodyDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.leftBodyNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftBodyTabSelected {
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-right: 7px;
+  border-top: 2px solid;
+  border-right: 1px solid #80808047;
+}
+.leftBodyTab {
+  padding-top: 10px;
+  padding-left: 8px;
+  padding-right: 7px;
+
+  color: gray;
+}
+
+.leftBodyTab:hover,
+.leftBodyTabSelected:hover {
+  cursor: pointer;
+}
+
+.rightBodyTabSelected {
+  padding: 8px;
+  border-top: 2px solid red;
+  border-left: 1px solid #80808047;
+}
+.rightBodyTab {
+  padding: 10px;
+  color: gray;
+}
+
+.rightBodyNav {
+  display: flex;
+}
+
+.leftBodyNavLeft,
+.leftBodyNavRight {
+  display: flex;
+}
+.leftBodyNavRight {
+  flex-direction: column;
+  font-size: x-small;
+  margin-top: 10px;
+}
+.leftBodyNavRight p {
+  margin-bottom: 2px;
+}
+
+.colorGray{
+  color: gray;
 }
