@@ -5,12 +5,8 @@ import { addDataToOrder } from "../../redux/table/actions";
 import Header from "../header/Header";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Table from "../table/Table";
-import Exchange from "../exchange/Exchange";
-import Chart from "../chart/Chart";
 import LeftBody from "../leftBody/LeftBody";
 import RightBody from "../rightBody/RightBody";
-import Order from "../../order/Order";
 
 class App extends Component {
   componentDidMount() {
@@ -37,14 +33,14 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App container">
+      <div className="App container d-flex justify-content-center">
         <BrowserRouter>
           <Header></Header>
           <Switch>
             <Route path="/">
-              <div className="leftBodyRightBodyDiv">
-                <LeftBody />
-                <RightBody />
+              <div className="d-flex justify-content-between w-100">
+                <LeftBody/>
+                <RightBody/>
               </div>
             </Route>
             <Route path="*">
@@ -55,7 +51,6 @@ class App extends Component {
             </Route>
           </Switch>
         </BrowserRouter>
-        <Order />
       </div>
     );
   }

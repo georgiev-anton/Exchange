@@ -1,14 +1,15 @@
 import React from "react";
 import Chart from "../chart/Chart";
-import Stakan from "../stakan/Stakan";
+import Stakan from "./stakan/Stakan";
 import { connect } from "react-redux";
 import { updateTabsLeftBody } from "../../redux/tabs/actions";
+import Order from "./order/Order";
 
 const LeftBody = ({ tabs, updateTabsLeftBody }) => {
   console.log(tabs);
 
   return (
-    <div>
+    <div className="leftBody" >
       <div className="leftBodyNav">
         <div className="leftBodyNavLeft">
           <p
@@ -32,6 +33,7 @@ const LeftBody = ({ tabs, updateTabsLeftBody }) => {
         </div>
       </div>
       <div>{tabs === "CHART" ? <Chart /> : <Stakan />}</div>
+      <Order />
     </div>
   );
 };

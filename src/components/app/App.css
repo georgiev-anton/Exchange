@@ -1,4 +1,10 @@
+p {
+  margin: 0 !important;
+  padding: 0;
+}
 .App {
+  max-width: 1140px;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -11,8 +17,8 @@ table {
 }
 
 thead tr th {
-  border-bottom: 1px solid wheat;
-  border-top: 1px solid wheat;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
   border-collapse: separate;
   border-spacing: 5px 5px;
 }
@@ -24,8 +30,10 @@ tbody tr#first td {
 }
 
 th {
-  color: #828282;
+  color: black;
   font-size: small;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .header {
@@ -88,6 +96,14 @@ th {
   display: flex;
 }
 
+.leftBody{
+  width: 75% !important;
+  padding-right: 30px;
+}
+.rightBody{
+  width: 25% !important;
+}
+
 .leftBodyRightBodyDiv {
   display: flex;
   flex-direction: row;
@@ -145,7 +161,7 @@ th {
   margin-bottom: 2px;
 }
 
-.colorGray{
+.colorGray {
   color: gray;
 }
 
@@ -156,4 +172,54 @@ th {
 .rightBodyDeposit {
   color: white;
   background: #e6433b;
+}
+
+.percentDiv p {
+  border-radius: 8px;
+  border: solid 1px;
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.buttonBTC {
+  color: white;
+  background: #e6433b;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.buttonBTC div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonBTC p {
+  margin: 0;
+}
+
+.yellowCircle {
+  background: #fecf50;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin-left: 25px;
+}
+
+input {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid gray;
+}
+
+.recharts-cartesian-axis-tick-line {
+  display: none;
+}
+
+.recharts-cartesian-grid {
+  width: 600px;
 }

@@ -1,27 +1,46 @@
 import React, { Component } from "react";
-import { LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
+import {
+  LineChart,
+  Line,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  ResponsiveContainer,
+  Tooltip,
+  Label
+} from "recharts";
 import { connect } from "react-redux";
 import moment from "moment";
 import { addDataToChart } from "../../redux/chart/actions";
 
-class Chart extends Component {
-  componentDidMount() {
-    setInterval(
-      (() => {
-        fetch("https://blockchain.info/ru/ticker")
-          .then(v => v.json())
-          .then(v =>
-            this.props.addDataToChart([
-              {
-                last: v.USD.last,
-                time: new Date().getTime()
-              }
-            ])
-          );
-      }).bind(this),
-      2000
+class CustomizedLabel extends Component {
+  render() {
+    const { x, y, stroke, value } = this.props;
+
+    return (
+      <text x={x} y={y} dy={14} fill={stroke} fontSize={14} textAnchor="bold">
+        {value}
+      </text>
     );
   }
+}
+
+class Chart extends Component {
+  componentDidMount() {
+    setInterval(() => {
+      fetch("https://blockchain.info/ru/ticker")
+        .then(v => v.json())
+        .then(v =>
+          this.props.addDataToChart([
+            {
+              last: v.USD.last,
+              time: new Date().getTime()
+            }
+          ])
+        );
+    }, 2000);
+  }
+
   render() {
     return (
       <div>
@@ -43,20 +62,32 @@ class Chart extends Component {
             </div>
           </div>
         </div>
-        <LineChart
-          width={600}
-          height={300}
-          data={this.props.data}
-          margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
-        >
-          <Line type="monotone" dataKey="last" stroke="red" />
-          <CartesianGrid stroke="#ccc" />
-          <XAxis
-            dataKey="time"
-            tickFormatter={timeStr => moment(timeStr).format("HH:mm")}
-          />
-          <YAxis orientation="right" />
-        </LineChart>
+        <ResponsiveContainer width="100%" height={235}>
+          <LineChart data={this.props.data}>
+            <Line
+            isAnimationActive={false}
+                          activeDot={{ r: 8 }}
+              type="monotone"
+              dataKey="last"
+              stroke="red"
+              label={<CustomizedLabel />}
+            />
+            {/* <Tooltip /> */}
+
+            <CartesianGrid stroke="#ccc" />
+            <XAxis
+              axisLine={false}
+              dataKey="time"
+              tickFormatter={timeStr => moment(timeStr).format("HH:mm")}
+            />
+            <YAxis
+              allowDecimals={true}
+              //domain={["dataMax-100", "dataMax+50"]}
+              axisLine={false}
+              orientation="right"
+            />
+          </LineChart>
+        </ResponsiveContainer>
       </div>
     );
   }
