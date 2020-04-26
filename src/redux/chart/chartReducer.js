@@ -18,10 +18,10 @@ export const chartReducer = (state = initialState, action) => {
       if (state.dataArray[state.dataArray.length - 1].last === action.payload[0].last) {
         return state;
       }
-      if (state.dataArray.length > 20) {
+      if (state.dataArray.length > 10) {
         return {
           ...state,
-          dataArray: [...state.dataArray.slice(0, 19), ...action.payload]
+          dataArray: [...state.dataArray.slice(0, 9), ...action.payload]
         };
       } else {
         return { ...state, dataArray: [...state.dataArray, ...action.payload] };

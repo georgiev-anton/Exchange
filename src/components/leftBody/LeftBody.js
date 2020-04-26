@@ -1,6 +1,6 @@
 import React from "react";
-import Chart from "../chart/Chart";
-import Stakan from "./stakan/Stakan";
+import Chart from "./chart/Chart";
+import OrderBook from "./orderBook/OrderBook";
 import { connect } from "react-redux";
 import { updateTabsLeftBody } from "../../redux/tabs/actions";
 import Order from "./order/Order";
@@ -19,9 +19,9 @@ const LeftBody = ({ tabs, updateTabsLeftBody }) => {
             График в реальном времени
           </p>
           <p
-            onClick={() => updateTabsLeftBody("STAKAN")}
+            onClick={() => updateTabsLeftBody("ORDERBOOK")}
             className={
-              tabs === "STAKAN" ? "leftBodyTabSelected" : "leftBodyTab"
+              tabs === "ORDERBOOK" ? "leftBodyTabSelected" : "leftBodyTab"
             }
           >
             Стакан
@@ -32,7 +32,7 @@ const LeftBody = ({ tabs, updateTabsLeftBody }) => {
           <p>Полноэкранный режим</p>
         </div>
       </div>
-      <div>{tabs === "CHART" ? <Chart /> : <Stakan />}</div>
+      <div>{tabs === "CHART" ? <Chart /> : <OrderBook />}</div>
       <Order />
     </div>
   );

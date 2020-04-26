@@ -7,7 +7,7 @@ class LastOrders extends Component {
   
   render() {
     return (
-      <table className="w-100 mt-2">
+      <table className="w-100 mt-5">
         <thead>
           <tr>
             <th>Время</th>

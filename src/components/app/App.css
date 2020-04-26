@@ -1,9 +1,13 @@
 p {
   margin: 0 !important;
   padding: 0;
+  font-family: "Gotham Pro" !important;
+}
+a {
+  font-family: "Gotham Pro" !important;
 }
 .App {
-  max-width: 1140px;
+  /* max-width: 1140px; */
   width: 100%;
   text-align: center;
   display: flex;
@@ -43,7 +47,8 @@ th {
   justify-content: space-between;
   margin-top: 10px;
   margin-bottom: 20px;
-  font-family: "GothamPro-Medium";
+  font-family: "Gotham Pro" !important;
+  font-variant: bold;
 }
 .header div {
   display: flex;
@@ -55,6 +60,8 @@ th {
   text-decoration: none;
   margin-left: 10px;
   margin-right: 10px;
+  font-family: "Gotham Pro" !important;
+  font-variant: bold;
 }
 
 .header a:hover {
@@ -82,11 +89,24 @@ th {
   font-family: "GothamPro-Bold";
 }
 
+.orderBuyP {
+  color: green;
+}
+
+.orderSellP {
+  color: #e6433b;
+}
+
 .order {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+.orderTitle {
+  font-size: 18px;
+  font-variant: "bold";
 }
 .order p {
   font-family: "GothamPro-Bold";
@@ -96,11 +116,17 @@ th {
   display: flex;
 }
 
-.leftBody{
+.orderBook {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.leftBody {
   width: 75% !important;
   padding-right: 30px;
 }
-.rightBody{
+.rightBody {
   width: 25% !important;
 }
 
@@ -136,7 +162,7 @@ th {
 
 .rightBodyTabSelected {
   padding: 8px;
-  border-top: 2px solid red;
+  border-top: 5px solid red;
   border-left: 1px solid #80808047;
 }
 .rightBodyTab {
@@ -174,14 +200,20 @@ th {
   background: #e6433b;
 }
 
+.percentDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .percentDiv p {
   border-radius: 8px;
   border: solid 1px;
-  margin: 5px;
+  margin: 3px !important;
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .buttonBTC {
@@ -222,4 +254,70 @@ input {
 
 .recharts-cartesian-grid {
   width: 600px;
+}
+.recharts-responsive-container {
+  box-shadow: 0px 10px 8px -3px rgba(160, 160, 160, 0.5);
+}
+
+.pGothamProBold {
+  font-weight: bolder;
+  font-family: "Gotham Pro";
+}
+
+.rightBodyDepositDiv {
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.rightBodyExchange{
+  box-shadow: 0px 10px 8px -3px rgba(122, 122, 122, 0.5);
+}
+
+.bidsItem {
+background: #e6433b73;
+}
+.asksItem {
+  background: #80a95c8a;
+}
+
+/* Black */
+.rightBodyDepositDivBlack {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0em 2em 50px rgba(122, 122, 122, 0.5);
+}
+
+.rightBodyDepositDivBlack input {
+  background-color: black;
+  color: white;
+}
+
+.rightBodyDepositBlack {
+  background-color: #80a95c;
+}
+.buttonBTCBlack {
+  background-color: #80a95c;
+  padding: 15px;
+}
+
+.buttonBTCBlack div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightBodyTabSelectedBuyBlack {
+  border-top: 5px solid #80a95c;
+  border-left: 0;
+}
+
+
+@media (max-width: 992px) {
+  .percentDiv {
+    flex-direction: column !important;
+  }
 }
