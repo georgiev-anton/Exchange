@@ -41,7 +41,7 @@ class Order extends Component {
 
 const mapStateToProps = state => {
   return {
-    dataArray: state.tableReducer.dataArray
+    dataArray: state.orderReducer.dataArray
   };
 };
 

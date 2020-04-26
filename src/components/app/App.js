@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import { connect } from "react-redux";
-import { addDataToOrder } from "../../redux/table/actions";
+import { addDataToOrder } from "../../redux/order/actions";
 import Header from "../header/Header";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,7 +9,8 @@ import LeftBody from "../leftBody/LeftBody";
 import RightBody from "../rightBody/RightBody";
 
 class App extends Component {
-  componentDidMount() {
+  componentDidMo
+  unt() {
     setInterval(
       function() {
         //сюда вставить апишку
@@ -39,8 +40,8 @@ class App extends Component {
           <Switch>
             <Route path="/">
               <div className="d-flex justify-content-between w-100">
-                <LeftBody/>
-                <RightBody/>
+                <LeftBody />
+                <RightBody />
               </div>
             </Route>
             <Route path="*">
