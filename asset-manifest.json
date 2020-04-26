@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/Exchange/static/css/main.f436ed34.chunk.css",
-    "main.js": "/Exchange/static/js/main.e6dab659.chunk.js",
-    "main.js.map": "/Exchange/static/js/main.e6dab659.chunk.js.map",
+    "main.css": "/Exchange/static/css/main.b15999aa.chunk.css",
+    "main.js": "/Exchange/static/js/main.1503d284.chunk.js",
+    "main.js.map": "/Exchange/static/js/main.1503d284.chunk.js.map",
     "runtime-main.js": "/Exchange/static/js/runtime-main.52bbfe65.js",
     "runtime-main.js.map": "/Exchange/static/js/runtime-main.52bbfe65.js.map",
     "static/css/2.69121389.chunk.css": "/Exchange/static/css/2.69121389.chunk.css",
-    "static/js/2.fdc366aa.chunk.js": "/Exchange/static/js/2.fdc366aa.chunk.js",
-    "static/js/2.fdc366aa.chunk.js.map": "/Exchange/static/js/2.fdc366aa.chunk.js.map",
+    "static/js/2.70b66149.chunk.js": "/Exchange/static/js/2.70b66149.chunk.js",
+    "static/js/2.70b66149.chunk.js.map": "/Exchange/static/js/2.70b66149.chunk.js.map",
     "index.html": "/Exchange/index.html",
-    "precache-manifest.0897d7c47735eed3c7a6be45006c5de0.js": "/Exchange/precache-manifest.0897d7c47735eed3c7a6be45006c5de0.js",
+    "precache-manifest.6cd994a0ba9865fb053ba7bc90d2704c.js": "/Exchange/precache-manifest.6cd994a0ba9865fb053ba7bc90d2704c.js",
     "service-worker.js": "/Exchange/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/Exchange/static/css/2.69121389.chunk.css.map",
-    "static/css/main.f436ed34.chunk.css.map": "/Exchange/static/css/main.f436ed34.chunk.css.map",
-    "static/js/2.fdc366aa.chunk.js.LICENSE.txt": "/Exchange/static/js/2.fdc366aa.chunk.js.LICENSE.txt",
-    "static/media/stylesheet.css": "/Exchange/static/media/GothamPro-Medium.c1613691.ttf",
-    "static/media/earth.16b3d5d1.svg": "/Exchange/static/media/earth.16b3d5d1.svg",
-    "static/media/logo.ba568d25.svg": "/Exchange/static/media/logo.ba568d25.svg",
+    "static/css/main.b15999aa.chunk.css.map": "/Exchange/static/css/main.b15999aa.chunk.css.map",
+    "static/js/2.70b66149.chunk.js.LICENSE.txt": "/Exchange/static/js/2.70b66149.chunk.js.LICENSE.txt",
+    "static/media/stylesheet.css": "/Exchange/static/media/GothamProNarrow-Medium.87194aeb.eot",
+    "static/media/earth.42f7572f.svg": "/Exchange/static/media/earth.42f7572f.svg",
+    "static/media/logo.8f739b91.svg": "/Exchange/static/media/logo.8f739b91.svg",
     "static/media/plusElipse.56c0a168.svg": "/Exchange/static/media/plusElipse.56c0a168.svg",
     "static/media/settings.60c91d09.svg": "/Exchange/static/media/settings.60c91d09.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.52bbfe65.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.fdc366aa.chunk.js",
-    "static/css/main.f436ed34.chunk.css",
-    "static/js/main.e6dab659.chunk.js"
+    "static/js/2.70b66149.chunk.js",
+    "static/css/main.b15999aa.chunk.css",
+    "static/js/main.1503d284.chunk.js"
   ]
 }
