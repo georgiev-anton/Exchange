@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
 import { connect } from "react-redux";
-import { addDataToOrder } from "../../redux/order/actions";
+import { addDataToOrder } from "../../redux/actions/Order/order";
 import Header from "../header/Header";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { addDataToOrderBook } from "../../redux/orderBook/actions";
+import { addDataToOrderBook } from "../../redux/actions/OrderBook/orderBook";
 import Exchange from "../exchange/Exchange";
 import TabsChartOrderBook from "../tabsChartOrderBook/TabsChartOrderBook";
 import Order from "../order/Order";

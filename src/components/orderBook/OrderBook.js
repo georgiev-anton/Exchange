@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { addDataToOrder } from "../../redux/order/actions";
+import { addDataToOrder } from "../../redux/actions/Order/order";
 import { connect } from "react-redux";
-import { addDataToOrderBook } from "../../redux/orderBook/actions";
+import { addDataToOrderBook } from "../../redux/actions/OrderBook/orderBook";
 class OrderBook extends Component {
   componentDidMount() {
     setInterval(() => {

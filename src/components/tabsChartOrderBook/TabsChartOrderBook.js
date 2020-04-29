@@ -1,8 +1,8 @@
 import React from "react";
 import Chart from "../chart/Chart";
-import OrderBook from "../orderBook/OrderBook";
+import OrderBook from "../OrderBook/OrderBook";
 import { connect } from "react-redux";
-import { updateTabsLeftBody } from "../../redux/tabs/actions";
+import { updateTabsLeftBody } from "../../redux/actions/Tabs/tabs";
 
 const TabsChartOrderBook = ({ tabs, updateTabsLeftBody }) => {
   console.log(tabs);

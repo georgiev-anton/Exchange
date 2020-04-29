@@ -1,21 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
-import { updateTabsRightBody } from "../../redux/tabs/actions";
+import { updateTabsRightBody } from "../../redux/actions/Tabs/tabs";
 import { ReactComponent as PlusInElipse } from "./assets/plusElipse.svg";
 
 const Exchange = ({ tabs, updateTabsRightBody }) => {
   const css =
     tabs === "BUY"
       ? {
-          rightBodyDeposit: "rightBodyDepositBlack p-2",
-          rightBodyDepositDiv: "rightBodyDepositDivBlack",
-          buttonBTC: "buttonBTCBlack",
-        }
+        rightBodyDeposit: "rightBodyDepositBlack p-2",
+        rightBodyDepositDiv: "rightBodyDepositDivBlack",
+        buttonBTC: "buttonBTCBlack",
+      }
       : {
-          rightBodyDeposit: "rightBodyDeposit p-2",
-          rightBodyDepositDiv: "rightBodyDepositDiv",
-          buttonBTC: "buttonBTC",
-        };
+        rightBodyDeposit: "rightBodyDeposit p-2",
+        rightBodyDepositDiv: "rightBodyDepositDiv",
+        buttonBTC: "buttonBTC",
+      };
   console.log(css);
 
   return (
@@ -94,11 +94,11 @@ const Exchange = ({ tabs, updateTabsRightBody }) => {
                     <div className="yellowCircle" />
                   </div>
                 ) : (
-                  <div>
-                    <p>Продать BTC</p>
-                    <div className="yellowCircle" />
-                  </div>
-                )}
+                    <div>
+                      <p>Продать BTC</p>
+                      <div className="yellowCircle" />
+                    </div>
+                  )}
               </div>
             </div>
           </div>

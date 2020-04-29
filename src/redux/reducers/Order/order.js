@@ -1,4 +1,4 @@
-import { ADD_DATA_TO_ORDER } from "../../consts/o";
+import { ADD_DATA_TO_ORDER } from "../../consts/order";
 
 const initialState = {
   dataArray: [{ b: {}, s: {} }]

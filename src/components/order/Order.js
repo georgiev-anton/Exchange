@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { addDataToOrder } from "../../redux/order/actions";
+import { addDataToOrder } from "../../redux/actions/Order/order";
 import { connect } from "react-redux";
 class Order extends Component {
   render() {

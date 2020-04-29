@@ -1,4 +1,4 @@
-import { ADD_DATA_TO_ORDER_BOOK } from "../types";
+import { ADD_DATA_TO_ORDER_BOOK } from "../../consts/orderBook";
 
 const initialState = {
   asks: [["4012.0000000", "0.2070000"]],
