@@ -16,21 +16,27 @@ a {
 
 table {
   border: 0;
-  border-collapse: separate;
-  border-spacing: 5px 5px;
+  /* border-collapse: separate;
+  border-spacing: 5px 5px; */
 }
 
 thead tr th {
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid #cccccc;
   border-collapse: separate;
-  border-spacing: 5px 5px;
+  /* border-spacing: 5px 5px; */
+}
+.orderBook thead tr th {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-collapse: separate;
+  /* border-spacing: 5px 5px; */
 }
 
 tbody tr#first td {
   border-top: 3px solid #4d4d4d;
   border-collapse: separate;
-  border-spacing: 5px 5px;
+  /* border-spacing: 5px 5px; */
 }
 
 th {
@@ -106,10 +112,12 @@ th {
 
 .orderTitle {
   font-size: 18px;
-  font-variant: "bold";
+  font-weight: bold;
+  font-family: "Gotham Pro";
+  margin-bottom: 1rem !important;
 }
 .order p {
-  font-family: "GothamPro-Bold";
+  font-family: "Gotham Pro";
 }
 
 .order div {
@@ -122,14 +130,15 @@ th {
   align-items: start;
 }
 
-.leftBody {
-  width: 75% !important;
-  padding-right: 30px;
-}
 .rightBody {
+  margin-left: 30px;
   width: 25% !important;
+  height: 100% !important;
 }
-
+.tabsChartOrderBook {
+  width: 75% !important;
+  height: 59% !important;
+}
 .leftBodyRightBodyDiv {
   display: flex;
   flex-direction: row;
@@ -139,7 +148,6 @@ th {
   display: flex;
   justify-content: space-between;
 }
-
 .leftBodyTabSelected {
   padding-top: 8px;
   padding-left: 8px;
@@ -253,7 +261,7 @@ input {
 }
 
 .recharts-cartesian-grid {
-  width: 600px;
+  /* width: 600px; */
 }
 .recharts-responsive-container {
   box-shadow: 0px 10px 8px -3px rgba(160, 160, 160, 0.5);
@@ -268,18 +276,34 @@ input {
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
-}
-.rightBodyExchange{
   box-shadow: 0px 10px 8px -3px rgba(122, 122, 122, 0.5);
+}
+.rightBodyExchange {
+}
+
+.chartOrderBook {
+  /* height: 99% !important; */
+  width: 100% !important;
 }
 
 .bidsItem {
-background: #e6433b73;
+  background: #e6433b45;
 }
 .asksItem {
-  background: #80a95c8a;
+  background: #75bf3445;
 }
-
+.topBody {
+  height: 375px;
+}
+.btn-secondary {
+  color: black !important;
+  background-color: white !important;
+}
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle {
+  background-color: rgb(172, 172, 172) !important;
+}
 /* Black */
 .rightBodyDepositDivBlack {
   color: white;
@@ -315,9 +339,15 @@ background: #e6433b73;
   border-left: 0;
 }
 
-
 @media (max-width: 992px) {
   .percentDiv {
     flex-direction: column !important;
+  }
+}
+
+@media (min-width: 1199) {
+  .rightBodyDepositDivBlack {
+    min-height: 375px;
+    height: 375px;
   }
 }
